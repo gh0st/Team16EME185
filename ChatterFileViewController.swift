@@ -15,7 +15,7 @@ class ChatterFileViewController : UIViewController {
     
 
     required init(coder aDecoder: NSCoder) {
-        var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+        var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
         self.audioURL = NSUUID().UUIDString + ".m4a"
         var pathComponents = [baseString, self.audioURL]
         var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)
@@ -60,9 +60,13 @@ class ChatterFileViewController : UIViewController {
     func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y += 200
     }
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    /*override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         view.endEditing(true)
-        super.touchesBegan(touches, withEvent: event)
+        super.touchesBegan(touches as Set<NSObject>, withEvent: event)
+    }*/
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        view.endEditing(true)
+        super.touchesBegan(touches as Set<NSObject>, withEvent: event)
     }
     
     
@@ -89,10 +93,10 @@ class ChatterFileViewController : UIViewController {
     
     // save button 
     @IBAction func saveTapped(sender: AnyObject) {
-        var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
         
         // create a chatterfile object
-        var chatterfile = NSEntityDescription.insertNewObjectForEntityForName("ChatterFile", inManagedObjectContext: context) as ChatterFile
+        var chatterfile = NSEntityDescription.insertNewObjectForEntityForName("ChatterFile", inManagedObjectContext: context) as! ChatterFile
         chatterfile.name = chatterTextField.text
         chatterfile.url = self.audioURL
         

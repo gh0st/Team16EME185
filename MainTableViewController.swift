@@ -29,9 +29,9 @@ class MainTableViewController: UIViewController, UITableViewDataSource, UITableV
         override func viewWillAppear(animated: Bool) {
             super.viewWillAppear(animated)
             // Roll Tide...
-            var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+            var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
             var request = NSFetchRequest(entityName: "ChatterFile")
-            self.chatterFiles = context.executeFetchRequest(request, error: nil)! as [ChatterFile]
+            self.chatterFiles = context.executeFetchRequest(request, error: nil)! as! [ChatterFile]
         }
         
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +48,7 @@ class MainTableViewController: UIViewController, UITableViewDataSource, UITableV
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             var chatterfile = self.chatterFiles[indexPath.row]
             
-            var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+            var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
             var pathComponents = [baseString, chatterfile.url]
             var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)
             
@@ -59,7 +59,7 @@ class MainTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            var nextViewControler = segue.destinationViewController as ChatterFileViewController
+            var nextViewControler = segue.destinationViewController as! ChatterFileViewController
             nextViewControler.previousViewController = self
         }
         
