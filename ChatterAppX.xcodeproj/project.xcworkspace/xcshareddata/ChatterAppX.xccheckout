@@ -5,7 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
+	<string>ED3D948A-9C2C-45E1-BCD2-3592397E8DD4</string>
+=======
 	<string>B4F8EAB7-63A1-4234-ABB8-221F423FA8A8</string>
+>>>>>>> c20cf0592132bb08c4e02f366314c48917aeb3d0
 	<key>IDESourceControlProjectName</key>
 	<string>ChatterAppX</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +38,11 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>44A677B187123138E8D8726F2300EDCAD8F9758D</string>
 			<key>IDESourceControlWCCName</key>
+<<<<<<< HEAD
+			<string>ChatterAppX-3</string>
+=======
 			<string>Team16EME185</string>
+>>>>>>> c20cf0592132bb08c4e02f366314c48917aeb3d0
 		</dict>
 	</array>
 </dict>
