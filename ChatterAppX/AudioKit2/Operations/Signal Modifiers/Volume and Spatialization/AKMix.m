@@ -12,7 +12,7 @@
 #import "AKMix.h"
 
 @interface AKMix ()
-@property NSString *state;
+//@property NSString *state;
 @end
 
 @implementation AKMix
@@ -22,6 +22,7 @@
     AKConstant *min;
     AKConstant *max;
     AKParameter *current;
+    NSString *state;
 }
 
 - (instancetype)initWithInput1:(AKParameter *)input1
@@ -107,9 +108,9 @@
         [inputsString appendFormat:@"AKControl(%@), ", current];
     }
     
-    [inputsString appendFormat:@"%@, ", min];
+    [inputsString appendFormat:@"%@, %@", min, max];
     
-    [inputsString appendFormat:@"%@", max];
+    //[inputsString appendFormat:@"%@", max];
     return inputsString;
 }
 

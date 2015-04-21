@@ -1878,6 +1878,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChatterAppX/AudioKit2/Platforms/OSX",
+					"$(PROJECT_DIR)/AudioKit/Platforms/OSX",
 				);
 				INFOPLIST_FILE = ChatterAppX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -1885,6 +1886,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChatterAppX/AudioKit2/Platforms/iOS/libs",
+					"$(PROJECT_DIR)/AudioKit/Platforms/iOS/libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chatter-Bridging-Header.h";
@@ -1900,6 +1902,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChatterAppX/AudioKit2/Platforms/OSX",
+					"$(PROJECT_DIR)/AudioKit/Platforms/OSX",
 				);
 				INFOPLIST_FILE = ChatterAppX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -1907,6 +1910,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChatterAppX/AudioKit2/Platforms/iOS/libs",
+					"$(PROJECT_DIR)/AudioKit/Platforms/iOS/libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chatter-Bridging-Header.h";
